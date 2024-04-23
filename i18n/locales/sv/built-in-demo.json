@@ -4,5 +4,6 @@
   "dateTime": "Datum/tid: {{val, datetime}}",
   "relativeTime": "Relativ tid: {{val, relativetime}}",
   "list": "Lista: {{val, list}}",
-  "weekdays": ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag"]
+  "weekdays": ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag"],
+  "testalert" : "Detta är en framgångsvarning."
 }

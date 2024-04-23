@@ -3,6 +3,8 @@ import React from 'react';
 import {useTranslation} from '../i18n/client';
 import type {LocaleTypes} from '../i18n/settings';
 import {useParams} from 'next/navigation';
+import Alert from '@mui/material/Alert';
+
 
 const BuiltInFormatsDemo = () => {
   let locale = useParams()?.locale as LocaleTypes;
@@ -11,6 +13,10 @@ const BuiltInFormatsDemo = () => {
 
   return (
     <div>
+      <Alert severity="success">{t('testalert')}</Alert>
+      <Alert severity="info">This is an info Alert.</Alert>
+      <Alert severity="warning">This is a warning Alert.</Alert>
+      <Alert severity="error">This is an error Alert.</Alert>
       <p>
         {/* "number": "Number: {{val, number}}", */}
         {t('number', {
