@@ -8,7 +8,7 @@ const ProductItem = (props: any) => {
   const {phone} = props;
   return (
     <Grid item lg={3} md={3} sm={6} xs={6} key={phone.id}>
-      <div className="bg-white border border-solid border-[#EAECF0] rounded-xl  flex flex-col h-full">
+      <div>
         <Link passHref href={`/products/${phone?.slug}`}>
           <div className="">
             <Typography

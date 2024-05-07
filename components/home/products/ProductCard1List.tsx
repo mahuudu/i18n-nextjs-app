@@ -3,7 +3,7 @@ import ProductItem from './ProductItem';
 
 const ProductCard1List = (props: any) => {
   const {listProduct = []} = props;
-  console.log('listProduct', listProduct);
+
   return (
     <div>
       <Grid
