@@ -1,16 +1,33 @@
 'use client';
-import { Roboto } from 'next/font/google';
-import { createTheme } from '@mui/material/styles';
+import {Poppins} from 'next/font/google';
+import {createTheme} from '@mui/material/styles';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
+import {primary, themeColors} from './themeColors';
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
 });
 
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 900,
+    lg: 1440,
+    xl: 1920,
+  },
+};
+
 const theme = createTheme({
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: poppins.style.fontFamily,
+  },
+  breakpoints,
+  palette: {
+    ...themeColors,
+    primary: {...primary, light: primary[100]},
   },
 });
 

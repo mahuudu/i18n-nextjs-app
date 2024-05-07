@@ -1,4 +1,4 @@
-import {createTranslation} from '../../../i18n/server';
+import {createTranslation} from '../../../../i18n/server';
 
 const AboutPage = async ({params: {locale}}) => {
   // Make sure to use the correct namespace here.
