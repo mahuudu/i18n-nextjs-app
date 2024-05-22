@@ -1,0 +1,10 @@
+:root {
+    --blue: #1897d4;
+    --white: #ffffff;
+    --Text-Primary: #222526;
+}
+@import './reset.scss';
+@import './variables.scss';
+@import './main-header.scss';
+@import './home.scss';
+@import './plan.scss';

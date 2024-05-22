@@ -1,3 +1,26 @@
 {
-  "greeting": "Hello world!"
+  "greeting": "Hello world!",
+  "banner": {
+    "banner1": {
+      "free": "FREE International",
+      "call": "calling worldwide",
+      "include": "Including Unlimited calling to",
+      "country": "80+ Countries",
+      "switch": "Switch Today"
+    }
+  },
+  "plans": {
+    "title": "Discover Our Plans",
+    "description": "Explore personalized mobile plans designed to fit your lifestyle and keep you connected.",
+    "plan_include": {
+      "unlimited_talk_text": "Unlimited Talk & Text",
+      "nationwide_coverage": "Nationwide coverage",
+      "use_best_network": "Use 5G+ or 4G LTE, whichever is strongest",
+      "unlimited_international_calling": "Unlimited international Calling to 80+ Countries"
+    },
+    "morebutton": "There are many other attractive plans"
+  },
+  "products": {
+    "title": "Check Out These Sweet Savings"
+  }
 }

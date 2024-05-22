@@ -1,12 +1,17 @@
-export const formatNumber = (number = 0, locale = 'en-US', options = {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2
-}) => {
-    if (!number || number < 0) {
-        number = 0
+const USDollar = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+});
+
+const USDollarNoStyle = new Intl.NumberFormat("en-US", {
+  currency: "USD",
+});
+
+export const formatPrice = (price:any) => {
+
+    if (price === null || price === "" || price === undefined || isNaN(price)) {
+      return "";
     }
-    return number.toLocaleString(locale, {
-        ...options
-    });
+
+    return USDollar.format(price)
 }

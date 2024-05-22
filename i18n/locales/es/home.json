@@ -1,3 +1,15 @@
 {
-  "greeting": "Hej världen!"
+  "greeting": "Hej världen!",
+  "banner" : {
+    "banner1": {
+      "free": "GRATIS Internacional",
+      "call": "llamando a todo el mundo",
+      "include": "Incluye llamadas ilimitadas a",
+      "country": "Más de 80 países"
+    }
+  },
+  "plans": {
+    "title": "Descubre Nuestros Planes",
+    "description": "Explora planes móviles personalizados diseñados para adaptarse a tu estilo de vida y mantenerte conectado."
+  }
 }

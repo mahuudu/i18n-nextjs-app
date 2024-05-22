@@ -1,72 +1,34 @@
-import { filterParamsEmpty } from '@/helper/filterParamsEmpty';
 import axios from 'axios';
 
 
-
-const instance = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_URL + '/api',
+const axiosClient = axios.create({
+	baseURL : process.env.NEXT_PUBLIC_URL,
+	headers:{
+		'Content-Type' : 'application/json',
+	},
 });
 
-instance.interceptors.request.use(
-    (config) => {
-        const accessToken =
-            typeof window != 'undefined' &&
-            window?.localStorage.getItem('accessToken');
-        try {
-            if (accessToken) {
-                config.headers.Authorization = `Bearer ${JSON.parse(
-                    accessToken
-                )}`;
-            }
-        } catch (error) { }
-        return config;
-    },
-    (error) => {
-        return Promise.reject(error);
-    }
-);
+// Add a request interceptor
+axiosClient.interceptors.request.use(function (config) {
+    // Do something before request is sent
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
 
-export async function getByRouter(router: string, params?: any) {
-    try {
-        const response = instance.get(router, {
-            params: filterParamsEmpty({ ...params })
-        });
-        return (await response).data;
-    } catch (error: any) {
-        return await new Promise((resolve) => {
-            resolve(error?.response?.data);
-        });
-    }
-}
+// Add a response interceptor
+axiosClient.interceptors.response.use(function (response) {
+    // Any status code that lie within the range of 2xx cause this function to trigger
+    // Do something with response data
+    return response.data;
+  }, function (error) {
+    // Any status codes that falls outside the range of 2xx cause this function to trigger
+    // Do something with response error
 
-export async function postByRouter(
-    router: string,
-    params: any = {}
-) {
-    try {
-        const response = instance.post(router, filterParamsEmpty(params));
-        return (await response).data;
-    } catch (error: any) {
-        return await new Promise((resolve) => {
-            resolve(error?.response?.data);
-        });
-    }
-}
-
-export async function putByRouter(
-    router: string,
-    params: any = {}
-) {
-    try {
-        const response = instance.put(router, filterParamsEmpty(params));
-        return (await response).data;
-    } catch (error: any) {
-        return await new Promise((resolve) => {
-            resolve(error?.response?.data);
-        });
-    }
-}
-
-export default instance;
+    // const { config, status, data } = error.response;
+    return Promise.reject(error);
+  });
 
 
+export default axiosClient;

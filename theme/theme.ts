@@ -1,6 +1,8 @@
 'use client';
+
 import {Poppins} from 'next/font/google';
 import {createTheme} from '@mui/material/styles';
+import { components } from "./components";
 
 import {primary, themeColors} from './themeColors';
 
@@ -13,10 +15,10 @@ const poppins = Poppins({
 const breakpoints = {
   values: {
     xs: 0,
-    sm: 600,
-    md: 900,
-    lg: 1440,
-    xl: 1920,
+    sm: 640,
+    md: 768,
+    lg: 1280,
+    xl: 1536,
   },
 };
 
@@ -24,10 +26,11 @@ const theme = createTheme({
   typography: {
     fontFamily: poppins.style.fontFamily,
   },
+  components : { ...components},
   breakpoints,
   palette: {
     ...themeColors,
-    primary: {...primary, light: primary[100]},
+    primary: {...primary, light: primary[100], dark: primary[100]},
   },
 });
 

@@ -1,0 +1,244 @@
+.plan-wrap {
+
+    .plan-acp-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 26px 26px 24px 24px;
+        background: var(--Primary-background, #fff);
+
+        .ant-form {
+            width: 100%;
+        }
+
+        .plan-acp-item-head {
+            width: 100%;
+            background: #dff3fa;
+            border-radius: 24px 24px 0px 0px;
+
+            .plan-acp-item-head-content {
+
+
+                @media (max-width: 600px) {
+                    padding: 12px 24px 4px 24px;
+                }
+            }
+        }
+
+        .plan-acp-item-content {
+            padding: 24px;
+            width: 100%;
+
+            .detail {
+                .sub-price {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    @media (max-width: 768px) {
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .price-main {
+                    text-align: center;
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .price {
+                    color: var(--Primary-main, #0397d6);
+
+                    /* Headline/Heading-04/Bold */
+                    
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 42px;
+                    /* 116.667% */
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+
+                sub {
+                    color: var(--Primary-main, #0397d6);
+
+                    /* Body/Text medium/Medium */
+                    
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+
+                    /* 150% */
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        line-height: 22px;
+                        bottom: 0;
+                    }
+                }
+
+                .sub {
+                    color: rgba(0, 0, 0, 0.45);
+                    
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 28px;
+                    /* 175% */
+                    text-decoration-line: line-through;
+                }
+            }
+
+            .after-months {
+                color: #8a8a8a;
+                
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .plan-name {
+            color: #000;
+            text-align: center;
+
+            font-family: "Poppins";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+
+    .custom-add-card-btn {
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        background: linear-gradient(90deg, #ff971b 0%, #ff7043 100%);
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+
+        &.ant-btn-loading {
+            flex-direction: row;
+        }
+
+        &:disabled {
+            background: #d9d9d9;
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, #ff971b 0%, #ff7043 100%);
+            color: #fff;
+        }
+
+        &:focus {
+            background: linear-gradient(90deg, #ff971b 0%, #ff7043 100%);
+            color: #fff;
+        }
+
+        &:active {
+            background: linear-gradient(90deg, #ff971b 0%, #ff7043 100%);
+            color: #fff;
+        }
+
+        span {
+            color: var(--Primary-contrastText, #fff);
+
+            /* Body/Text medium/Semibold */
+            
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+
+            /* 150% */
+            @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        a {
+            color: #fff !important;
+
+            
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+
+            /* 150% */
+            @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    ///Form Cycle
+    .form-select-cycle-wrap {
+
+        .radio-form-cycle {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            grid-gap: 10px;
+            gap: 10px;
+            border-radius: 5px;
+
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                gap: 10px;
+            }
+
+            & label {
+                height: 50px;
+                min-width: 120px;
+                width: 100%;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 12px;
+                color: #000;
+                background: #fff;
+                border-color: #fff;
+                justify-content: center;
+
+
+                & .MuiRadio-root {
+                    display: none;
+                }
+            }
+
+            & label:has(.Mui-checked) {
+                color: #fff;
+                background: #1897d4;
+                border-color: #1897d4;
+            }
+        }
+    }
+
+}

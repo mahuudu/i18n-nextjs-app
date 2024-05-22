@@ -1,0 +1,76 @@
+{
+    "main-menu": [
+      {
+        "label": "Phones",
+        "subItems": [
+          {
+            "name": "All",
+            "path": "/phone"
+          },
+          {
+            "name": "iPhone",
+            "path": "/phone?os=ios"
+          },
+          {
+            "name": "Android",
+            "path": "/phone?os=android"
+          },
+          {
+            "name": "Hotspot Devices",
+            "path": "/comming-soon"
+          }
+        ]
+      },
+      {
+        "label": "Shop Plans",
+        "subItems": [
+          {
+            "name": "Plans",
+            "path": "/plans"
+          },
+          {
+            "name": "Hotspot Plans",
+            "path": "/hotspot-plans"
+          },
+          {
+            "name": "Pay As You Go",
+            "path": "/pay-as-you-go-plans"
+          }
+        ]
+      },
+      {
+        "label": "Family Plans",
+        "href": "/family-plan"
+      },
+      {
+        "label": "Coverage",
+        "href": "/check-coverage"
+      },
+      {
+        "label": "Find A Store",
+        "href": "/store-locator"
+      },
+      {
+        "label": "Help",
+        "subItems": [
+          {
+            "name": "About Us",
+            "path": "/about"
+          },
+          {
+            "name": "How To Sign Up",
+            "path": "/how-it-work"
+          },
+          {
+            "name": "Support",
+            "path": "/support"
+          },
+          {
+            "name": "Contact",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  }
+  

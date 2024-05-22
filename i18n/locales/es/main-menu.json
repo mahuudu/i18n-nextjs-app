@@ -1,0 +1,76 @@
+{
+    "main-menu": [
+      {
+        "label": "Teléfonos",
+        "subItems": [
+          {
+            "name": "Todos",
+            "path": "/phone"
+          },
+          {
+            "name": "iPhone",
+            "path": "/phone?os=ios"
+          },
+          {
+            "name": "Android",
+            "path": "/phone?os=android"
+          },
+          {
+            "name": "Dispositivos Hotspot",
+            "path": "/comming-soon"
+          }
+        ]
+      },
+      {
+        "label": "Planes de Compra",
+        "subItems": [
+          {
+            "name": "Planes",
+            "path": "/plans"
+          },
+          {
+            "name": "Planes Hotspot",
+            "path": "/hotspot-plans"
+          },
+          {
+            "name": "Paga a Medida que Usas",
+            "path": "/pay-as-you-go-plans"
+          }
+        ]
+      },
+      {
+        "label": "Planes Familiares",
+        "href": "/family-plan"
+      },
+      {
+        "label": "Cobertura",
+        "href": "/check-coverage"
+      },
+      {
+        "label": "Encontrar una Tienda",
+        "href": "/store-locator"
+      },
+      {
+        "label": "Ayuda",
+        "subItems": [
+          {
+            "name": "Sobre Nosotros",
+            "path": "/about"
+          },
+          {
+            "name": "Cómo Registrarse",
+            "path": "/how-it-work"
+          },
+          {
+            "name": "Soporte",
+            "path": "/support"
+          },
+          {
+            "name": "Contacto",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  }
+  

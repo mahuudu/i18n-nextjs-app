@@ -4,7 +4,7 @@ export const orange = {
     100: '#F9DDBD',
     500: '#FA7342',
     900: '#A7331B',
-    main: "#eb6239",
+    main: "#FF971B",
   };
   
   export const purple = {
@@ -42,22 +42,22 @@ export const orange = {
     900: "#101828"
   };
   export const primary = {
-    100: "#fff",
-    200: "#DAA6DE", 
-    300: "#753A88",  
-    400: "#6F347F",  
-    500: "#692E76",  
-    600: "#63286E",  
-    700: "#5D2265",  
-    800: "#571C5C",  
-    900: "#511655",  
-    main: "#864b97",
+    100: "#FCE9EC",
+    200: "#F8C7CF",
+    300: "#F07D90",
+    400: "#EC6178",
+    500: "#D23F57",
+    600: "#E63E58",
+    700: "#E3364E",
+    800: "#DF2E44",
+    900: "#1897d4",
+    main: "#1897d4",
   };
   export const secondary = {
     100: "#e8e8ee",
     200: "#b9bacb",
     300: "#8a8ca8",
-    400: "#98A2B3",
+    400: "#5b5d85",
     500: "#141850",
     600: "#0F3460",
     700: "#101340",
@@ -161,17 +161,18 @@ export const orange = {
     success,
     secondary,
     white,
+    blue,
     black,
+    primary,
     info: blue,
     divider: grey[200],
     background: {
       default: grey[100],
     },
     text: {
-      primary: grey[900],
+      primary: primary[900],
       secondary: grey[800],
       disabled: grey[400],
-      colorFooter: white.main
     },
   };
   

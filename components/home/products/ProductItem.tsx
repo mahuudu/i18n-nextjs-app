@@ -1,4 +1,4 @@
-import {formatNumber} from '@/helper/formatNumber';
+import { formatPrice} from '@/helper/formatNumber';
 
 import {Button, Grid, Skeleton, Typography, useMediaQuery} from '@mui/material';
 import Image from 'next/image';
@@ -6,10 +6,11 @@ import Link from 'next/link';
 
 const ProductItem = (props: any) => {
   const {phone} = props;
+  
   return (
     <Grid item lg={3} md={3} sm={6} xs={6} key={phone.id}>
       <div>
-        <Link passHref href={`/products/${phone?.slug}`}>
+        <Link passHref href={`/phone/${phone?.slug}`}>
           <div className="">
             <Typography
               variant="body1"
@@ -27,7 +28,7 @@ const ProductItem = (props: any) => {
         </Link>
         <Link
           passHref
-          href={`/prepaid/products/${phone?.slug}`}
+          href={`/phone/${phone?.slug}`}
           className="mt-auto"
         >
           <div className="flex items-center justify-center py-3">
@@ -55,7 +56,7 @@ const ProductItem = (props: any) => {
                 }}
                 color="black.main"
               >
-                {formatNumber(phone?.min_price)}
+                {formatPrice(phone?.min_price)}
               </Typography>
               {phone?.max_price > phone?.min_price && (
                 <Typography
@@ -68,7 +69,7 @@ const ProductItem = (props: any) => {
                   }}
                   color="black.main"
                 >
-                  - {formatNumber(phone?.max_price)}
+                  - {formatPrice(phone?.max_price)}
                 </Typography>
               )}
             </div>

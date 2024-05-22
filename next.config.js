@@ -1,17 +1,23 @@
+const path = require('path')
+
+
 module.exports = {
     devIndicators: {},
     publicRuntimeConfig: {
-      // Available on both server and client
       theme: "DEFAULT",
       currency: "USD",
     },
+    sassOptions: {
+      includePaths: [path.join(__dirname, 'styles')],
+    },
     images: {
-      domains: [
-        "blog.airtalkwireless.com",
-        "d31xm88temwdqu.cloudfront.net",
-        "cdn.airvoicewireless.com",
-        "d1zcfru032dgn8.cloudfront.net",
-        'cloudfront.net',
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'cloudfront.net',
+          hostname: '**.cloudfront.net',
+          port: '',
+        }
       ],
     },
   
